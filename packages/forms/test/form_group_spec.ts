@@ -50,6 +50,11 @@ import {of } from 'rxjs';
         expect(g.value).toEqual({'one': '111', 'two': '222'});
       });
 
+      it('should test something', () => {
+        const g = new FormGroup({'one': new FormControl('112'), 'two': new FormControl('222')});
+        expect(g.value).toEqual({'one': '112', 'two': '222'});
+      })
+
       it('should be empty when there are no child controls', () => {
         const g = new FormGroup({});
         expect(g.value).toEqual({});
